@@ -34,12 +34,17 @@ timeout %start_delay_seconds%
 
 echo.
 echo Starting BoomPow Client...
+if %payout_address% == "ban_1boompow14irck1yauquqypt7afqrh8b6bbu5r93pc6hgbqs7z6o99frcuym" (
+	echo [91mERROR: Payout address is not configured. Please configure your payout address.[0m
+	timeout 30
+	exit
+)
 if %async_mode% (
     if %limit_logging% (
         python bpow_client.py --payout %payout_address% --work %desired_work_type% --async_mode --limit-logging
-    ) else {
+    ) else (
         python bpow_client.py --payout %payout_address% --work %desired_work_type% --async_mode
-    }
+    )
 ) else (
     if %limit_logging% (
         python bpow_client.py --payout %payout_address% --work %desired_work_type% --limit-logging
