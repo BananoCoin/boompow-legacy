@@ -37,9 +37,9 @@ echo Starting BoomPow Client...
 if %async_mode% (
     if %limit_logging% (
         python bpow_client.py --payout %payout_address% --work %desired_work_type% --async_mode --limit-logging
-    ) else {
+    ) else (
         python bpow_client.py --payout %payout_address% --work %desired_work_type% --async_mode
-    }
+    )
 ) else (
     if %limit_logging% (
         python bpow_client.py --payout %payout_address% --work %desired_work_type% --limit-logging
