@@ -22,6 +22,7 @@ pip3 install -r requirements.txt
 ```
 
 - Ensure password configuration is correct for MQTT: `sudo mosquitto_passwd -c /etc/mosquitto/passwd {MQTT_USER}`
+  - Ensure `client` & `bpowinterface` user added to `/etc/mosquitto/passwd`
 - Update mosquitto configuration to enforce passwords and set up listeners: `sudo cp example.conf /etc/mosquitto/conf.d/default.conf`
 - Update service with correct paths and copy to systemd: `sudo cp example.conf /etc/systemd/system/boompow.service | sudo vim /etc/systemd/system/boompow.service`
 - Open port 8883: `sudo ufw allow 8883`
