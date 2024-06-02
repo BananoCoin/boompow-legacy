@@ -8,6 +8,7 @@ These steps will guide you on how to setup a new work client. The nano-work-serv
 
 1. [Python](https://www.python.org/) 3.6.7 or higher.
 
+Note that there are compatability issues with Python 3.10.1 currently. 
 ### Installation
 
 - Download the [latest version](https://github.com/bbedward/boompow/releases) and extract it.
