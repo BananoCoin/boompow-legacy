@@ -7,6 +7,7 @@ These steps will guide you on how to setup a new work client. The nano-work-serv
 ### Requirements
 
 1. [Python](https://www.python.org/) 3.6.7 or higher.
+  **Python 3.10.x is not yet supported.**
 
 ### Installation
 
